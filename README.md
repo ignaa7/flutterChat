@@ -1,1 +1,1 @@
-Aplicación que simula un chat grupal.
+Aplicación que simula un chat grupal

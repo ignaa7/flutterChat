@@ -1,1 +1,1 @@
-# flutterChat
+Aplicación que simula un chat grupal.

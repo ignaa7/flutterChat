@@ -18,19 +18,7 @@ class _MainScreenState extends State<MainScreen> {
         colorScheme: ColorScheme.fromSeed(
             seedColor: const Color.fromARGB(255, 63, 17, 177)),
       ),
-      home: StreamBuilder(
-        stream: FirebaseAuth.instance.authStateChanges(),
-        builder: (ctx, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const SplashScreen();
-          }
-          if (snapshot.hasData) {
-            return const ChatScreen();
-          }
-          return const AuthScreen();
-        },
-      ),
+      home: const ChatScreen(),
     );
-  }
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_chat/screens/authentication_screen.dart';
 import 'package:flutter_chat/screens/chat_screen.dart';
 
 class MainScreen extends StatefulWidget {
@@ -18,7 +19,7 @@ class _MainScreenState extends State<MainScreen> {
         colorScheme: ColorScheme.fromSeed(
             seedColor: const Color.fromARGB(255, 63, 17, 177)),
       ),
-      home: const ChatScreen(),
+      home: const AuthenticationScreen(),
     );
   }
 }

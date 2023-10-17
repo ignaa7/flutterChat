@@ -30,37 +30,23 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
     }
 
     _form.currentState!.save();
-    try {
-      setState(() {
-        _isAuthenticating = true;
-      });
-      if (_isLogin) {
-        await Service.userLogIn(
-          email: _enteredEmail,
-          password: _enteredPassword,
-        );
-      } else {
-        await Service.userSignUp(
-          email: _enteredEmail,
-          password: _enteredPassword,
-          username: _enteredUsername,
-          image: _selectedImage,
-        );
-      }
-    } on FirebaseAuthException catch (error) {
-      if (error.code == 'email-already-in-use') {}
-      if (context.mounted) {
-        ScaffoldMessenger.of(context).clearSnackBars();
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text(error.message ?? 'Authentication failed.'),
-          ),
-        );
-      }
-      setState(() {
-        _isAuthenticating = false;
-      });
-    }
+
+      // setState(() {
+      //   _isAuthenticating = true;
+      // });
+      // if (_isLogin) {
+      //   await Service.userLogIn(
+      //     email: _enteredEmail,
+      //     password: _enteredPassword,
+      //   );
+      // } else {
+      //   await Service.userSignUp(
+      //     email: _enteredEmail,
+      //     password: _enteredPassword,
+      //     username: _enteredUsername,
+      //     image: _selectedImage,
+      //   );
+      // }
   }
 
   @override
